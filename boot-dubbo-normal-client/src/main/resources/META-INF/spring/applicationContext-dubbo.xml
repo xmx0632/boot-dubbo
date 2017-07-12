@@ -6,7 +6,8 @@
 	<dubbo:application name="dubbox-demo-client" />
 	<!-- 使用multicast广播注册中心暴露发现服务地址 -->
 	<!-- <dubbo:registry address="multicast://224.0.0.0:1234" /> -->
-	<dubbo:registry protocol="zookeeper" address="10.10.108.132.:2181" />
+	<dubbo:registry protocol="zookeeper" address="localhost.:2181" />
+	<!-- <dubbo:registry protocol="zookeeper" address="10.10.108.132.:2181" /> -->
 	<dubbo:monitor protocol="registry" />
 	<dubbo:reference id="userService" interface="boot.dubbo.api.UserService"   protocol="dubbo"/>
 </beans>

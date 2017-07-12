@@ -4,7 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 	<dubbo:application name="boot-simple-client" owner="percy" organization="dubbox" />
-	<dubbo:registry address="zookeeper://10.10.108.132:2181" />
+	<!-- <dubbo:registry address="zookeeper://10.10.108.132:2181" /> -->
+	<dubbo:registry address="zookeeper://localhost:2181" />
 	<!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
 	<dubbo:annotation package="boot.dubbo" />
 	<!-- <dubbo:reference id="userService" interface="boot.dubbo.api.UserService"  protocol="rest"/>-->
